@@ -1,0 +1,30 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.categorias{
+
+    &__heading{
+        @include m.heading;
+        margin-top: 5rem;
+    }
+    &__grid{
+        display: grid;
+        @include m.tablet {
+            @include m.grid(2, 4rem);
+        }
+        @include m.desktop {
+            @include m.grid(3, 3rem);
+        }
+    }
+}
+
+.categoria{
+
+    &__heading{
+        text-align: center;
+    }
+    &__imagen{
+        width: 40rem;
+        margin-inline: auto;
+    }
+}

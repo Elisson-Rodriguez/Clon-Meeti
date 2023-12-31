@@ -1,0 +1,33 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.sidebar {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, v.$secundario 50%, v.$secundario 100%), url(../img/mapa.jpg);
+    background-repeat: no-repeat;
+    background-size: center, cover;
+    background-position: top center;
+    margin-inline: auto;
+    max-height: 50rem;
+    width: 35rem;
+
+    &__informacion {
+        grid-row: 2 / 3;
+        text-align: center;
+        color: v.$blanco;
+    }
+
+    &__texto {
+        font-weight: 700;
+        color: v.$blanco;
+
+        span {
+            font-weight: 400;
+        }
+    }
+
+    &__ubicacion {
+        color: v.$blanco;
+    }
+}
